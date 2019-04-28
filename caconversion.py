@@ -12,15 +12,13 @@ import pyemma as pe
 from glob import glob
 import numpy as np
 
-def get_CA_Distances():
+def get_CA_Distances(trajectory_folders,topology_file):
     
     #folders containing the trajectories
-    trajs = sorted(glob("- - - -"))
+    trajs = sorted(glob(trajectory_folders))
 
-    #topology file
-    top = "abeta/topol.gro"
 
-    feat_guide = pe.coordinates.featurizer(top)
+    feat_guide = pe.coordinates.featurizer(topology_file)
     feat_guide.add_distances_ca(excluded_neighbors=0)
    
     inp = pe.coordinates.source(trajs, feat_guide)
