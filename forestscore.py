@@ -62,8 +62,8 @@ def forest_score(ca_distances, run_length, test_split, weights=None, n_jobs=1, m
     indicies = np.array(range(0, ca_distances.shape[0]))
     np.random.shuffle(indicies)
 
-    dataset = Dataset(ca_distances, labels, 0.2, indicies, weights=weights)
-    offset_dataset = Dataset(ca_distances, offsetLabels, 0.2, indicies, weights=weights)
+    dataset = Dataset(ca_distances, labels, test_split, indicies, weights=weights)
+    offset_dataset = Dataset(ca_distances, offsetLabels, test_split, indicies, weights=weights)
 
     probabilities,  offset_forest = forest_probabilities(dataset, n_jobs, min_samples_leaf)
     offset_probabilities, offsetForest = forest_probabilities(offset_dataset, n_jobs, min_samples_leaf)
