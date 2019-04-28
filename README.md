@@ -1,1 +1,1 @@
-# rf-ensemble-scoring
+# Random Forest Structural Ensemble Scoring
