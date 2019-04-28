@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Code to compute convergence of a structural ensemble using random forests.
+A numpy array containing the pairwise alpha-carbon distance must be passed
+to the forest score method along with various parameters.
+"""
+
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 import foreststats
