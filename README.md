@@ -4,4 +4,4 @@ A novel method to assess the convergence of protein structural ensembles using r
 
 _caconversion.py_ provides the necessary code to convert an ensemble into a set of pairwise Alpha-Carbon distances suitable for scoring. 
 
-This is passed to _forestscore.py_ which returns the probability-based score.
+This is passed to _forestscore.py_ along with other parameters and returns the probability-based score.
